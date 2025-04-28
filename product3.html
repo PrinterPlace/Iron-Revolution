@@ -121,31 +121,19 @@
   </div>
 
   <script>
-    // Function to add the product to the cart
-    function addToCart(productName) {
-      // Get current cart items from localStorage
+    function addToCart() {
       const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-
-      // Add the product to the cart
-      cartItems.push(productName);
-
-      // Save the updated cart to localStorage
+      cartItems.push("Massage Chair"); // Change this to the correct product name
       localStorage.setItem('cartItems', JSON.stringify(cartItems));
-
-      // Redirect the user to the shop page to refresh the cart count
-      window.location.href = "shop.html"; // This will redirect back to the shop page
+      window.location.href = "shop.html"; // Redirect to shop to refresh cart count
     }
 
-    // Function to update the cart count on the page load
     function updateCartCount() {
       const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
       document.getElementById('cart-count').textContent = cartItems.length;
     }
 
-    // Call the updateCartCount function on page load to set the initial count
-    window.onload = function() {
-      updateCartCount();
-    };
+    updateCartCount();
   </script>
 
 </body>
