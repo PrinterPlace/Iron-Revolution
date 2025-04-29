@@ -33,8 +33,8 @@
 
     .header-inner .middle {
       display: flex;
-      gap: 20px;
-      margin-left: -90px;
+      gap: 7px;
+      align-items: middle;
     }
 
     .header-inner .middle a {
@@ -64,13 +64,16 @@
 
     .main-container {
       max-width: 800px;
+      width: 90%; /* NEW: Let it be flexible */
       margin: 120px auto 50px auto;
       padding: 2rem;
       background: #fff;
       border-radius: 10px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
       text-align: center;
+      box-sizing: border-box; /* Always add this for clean padding */
     }
+
 
     ul.cart-list {
       list-style: none;
@@ -134,7 +137,7 @@
   <header>
     <div class="header-inner">
       <div class="left">
-        <a class="logo" href="index.html">Iron Revolution</a>
+        <a class="logo" href="index.html">Iron Rev</a>
       </div>
       <div class="middle">
         <a href="shop.html">Shop</a>
