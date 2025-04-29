@@ -40,8 +40,8 @@
 
     .header-inner .middle {
       display: flex;
-      gap: 30px;
-      margin-left: -90px;
+      gap: 15px;
+      align-items: middle;
     }
 
     .header-inner .middle a,
@@ -62,7 +62,7 @@
 
     .product-image {
       width: 100%;
-      max-width: 400px;
+      max-width: 600px;
       margin-bottom: 20px;
     }
 
@@ -97,7 +97,7 @@
   <header>
     <div class="header-inner">
       <div class="left">
-        <a class="logo" href="index.html">Iron Revolution</a>
+        <a class="logo" href="index.html">Iron Rev</a>
       </div>
       <div class="middle">
         <a href="shop.html">Shop</a>
@@ -111,20 +111,19 @@
 
   <div class="main-container">
     <h1>Barstool</h1>
-    <img class="product-image" src="stool.JPG" alt="Barstool">
-    <p><strong>Price:</strong> $75</p>
+    <img class="product-image" src="stool.JPG" alt="Massage Chair">
+    <p><strong>Price:</strong> $500</p>
     <p>
-      A stylish and functional barstool perfect for any modern kitchen or bar area. Built with durable steel and comfortable seating, this stool adds a sleek, industrial touch to your space.
+      With this barstool you can enjoy your drinks with friends and family in style. The barstool is strong and sturdy, with a modern design that will fit in any home.
     </p>
-    <button class="button" onclick="addToCart('Barstool')">Add to Cart</button>
-
+    <button class="button" onclick="addToCart()">Add to Cart</button>
     <a class="button" href="checkout.html">Buy</a>
   </div>
 
   <script>
     function addToCart() {
       const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-      cartItems.push("Barstool"); // Change this to the correct product name
+      cartItems.push("Massage Chair"); // Change this to the correct product name
       localStorage.setItem('cartItems', JSON.stringify(cartItems));
       window.location.href = "shop.html"; // Redirect to shop to refresh cart count
     }
@@ -136,5 +135,6 @@
 
     updateCartCount();
   </script>
+
 </body>
 </html>
