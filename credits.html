@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Use the same <head> as below for every page -->
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Credits - Iron Revolution</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - Iron Revolution</title>
   <style>
     body {
       margin: 0;
@@ -43,8 +44,8 @@
 
     .header-inner .middle {
       display: flex;
-      gap: 20px;
-      margin-left: -90px;
+      gap: 7px;
+      align-items: middle;
     }
 
     .header-inner .right {
@@ -56,12 +57,51 @@
       font-weight: bold;
       font-size: 1.2rem;
       color: #fff;
+      text-decoration: none;
     }
 
-    /* Ensure no other styles are shrinking header */
-    header {
-      font-size: 1rem; /* Keeps it uniform */
-      padding: 1rem 2rem;
+    a.cart-link {
+      color: #fff;
+      font-size: 1.2rem;
+      text-decoration: none;
+    }
+
+    .main-container {
+      max-width: 800px;
+      margin: 120px auto 50px auto;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .main-container {
+        margin: 100px 10px 40px 10px;
+        padding: 1rem;
+      }
+
+      header {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+      }
+
+      .header-inner {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .header-inner .middle {
+        margin-left: -90px;
+        gap: 10px;
+      }
+
+      .header-inner .right {
+        margin-top: 0;
+      }
+    }
     }
   </style>
 </head>
@@ -69,7 +109,7 @@
   <header>
     <div class="header-inner">
       <div class="left">
-        <a class="logo" href="index.html">Iron Revolution</a>
+        <a class="logo" href="index.html">Iron Rev</a>
       </div>
       <div class="middle">
         <a href="shop.html">Shop</a>
@@ -83,28 +123,5 @@
 
   <div class="main-container">
     <h1>Credits</h1>
-    <div class="credits-text">
-      
-      <p>This project was created by the Iron Revolution team.</p>
-      <p>This website was created by one of our four team members (Joe). The project had all four of us put in time and effort in to it, so special thanks to the whole group, Drew, Nolan, Lucasz.</p>
-    </div>
+    <p>This website was created and styled by Joe, a member of this furniture project group. The whole group put their time and effort in to the project, so the appriciation goes to the project manager Nolan, Materials specialist Lukasz, Lead designer Drew, and me the media specialist</p>
   </div>
-
-  <script>
-    function addToCart() {
-      const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-      cartItems.push("Swedish Ladder");
-      localStorage.setItem('cartItems', JSON.stringify(cartItems));
-      updateCartCount();
-    }
-
-    function updateCartCount() {
-      const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-      document.getElementById('cart-count').textContent = cartItems.length;
-    }
-
-    updateCartCount();
-  </script>
-  
-</body>
-</html>
